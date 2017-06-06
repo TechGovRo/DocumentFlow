@@ -1,0 +1,16 @@
+django>=1.11
+gunicorn
+psycopg2
+
+beautifulsoup4>=4.1.3
+
+requests
+psutil
+paramiko
+
+redis
+hiredis
+
+django-redis-sessions
+
+oauth2client

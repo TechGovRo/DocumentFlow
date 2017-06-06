@@ -1,0 +1,44 @@
+{% load staticfiles %}
+{% if csrf_token %}{# Just to create the CSRF cookie #}{% endif %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Document flow manager{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Romanian Government Document flow manager.">
+    <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#"></html>
+    <meta property="og:image" content="{% static "icon.png"  %}" />
+    <link rel="image_src" href="{% static "icon.png" %}" />
+    <link rel="icon" type="image/png" href="{% static "favicon.png" %}">
+    <link rel="stylesheet" href="{% static "css/ext/font-awesome.min.css" %}">
+
+    <script>
+//        var SERVER_PAGE_LOAD = {{ SERVER_TIME }};
+//        var WEBSOCKET_URL = "{{ WEBSOCKET_URL }}";
+//        var USER = {{ USER }};
+
+        // This is required to be a global, since blog and forum (establishment) need to know
+        // how to manage their URLs.
+        window.SINGLE_PAGE_APP = true;
+    </script>
+
+    <script src="{% static "js/ext/min/polyfill.min.js" %}"></script>
+    <script src="{% static "js/bundle.js" %}"></script>
+</head>
+<body>
+<noscript>You have javascript turned off. Any functionality on our website needs javascript turned on.</noscript>
+<style>
+    body {
+        font-family:"Lato",  "Segoe UI", "Lucida Sans Unicode", "Lucida Grande", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    noscript {
+        background-color: #BBBBBB;
+        font-size: x-large;
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+    }
+</style>
+{% block content %}{% endblock %}
+</body>
+</html>

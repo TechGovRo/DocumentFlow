@@ -1,0 +1,8 @@
+.DS_Store
+*/local_settings.py
+/docmanager/static/js/bundle.js
+/static
+*.pid
+/config
+/node_modules
+*.pyc
