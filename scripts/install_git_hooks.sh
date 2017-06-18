@@ -23,3 +23,6 @@ $MY_PATH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 
 cp -r $MY_PATH/hooks $location
+
+# TODO: this checkout should be y/n question
+git checkout master

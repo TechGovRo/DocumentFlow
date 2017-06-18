@@ -25,8 +25,9 @@ SECRET_KEY = 'ls+mlpo#rrvg3sibm)86&#u$n3hv7(k9%g85(&ihuxd$)^sba*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost"]
 
+SITE_ID = 1
 
 # Application definition
 

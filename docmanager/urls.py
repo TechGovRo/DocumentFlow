@@ -5,7 +5,8 @@ from docmanager import views
 from django.contrib.sitemaps.views import sitemap
 
 urlpatterns = [
-    url(r"^$", views.index, name="index"),
+    url(r'^$', views.index, name="index"),
+    url(r'^.*/$', views.index),
 
     # url(r"^favicon.ico$", RedirectView.as_view(url="/static/favicon.png", permanent=False), name="favicon"),
 
